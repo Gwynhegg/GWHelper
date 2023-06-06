@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GWHelper", "GWHelper.csproj", "{970769CA-46E1-46E7-B21E-4BF0A87DE28A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GWHelper.Infrastructure", "..\GWHelper.Infrastructure\GWHelper.Infrastructure.csproj", "{BF3162DD-7CD8-4D6C-A990-1B76C687971A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{970769CA-46E1-46E7-B21E-4BF0A87DE28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970769CA-46E1-46E7-B21E-4BF0A87DE28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970769CA-46E1-46E7-B21E-4BF0A87DE28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970769CA-46E1-46E7-B21E-4BF0A87DE28A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF3162DD-7CD8-4D6C-A990-1B76C687971A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF3162DD-7CD8-4D6C-A990-1B76C687971A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF3162DD-7CD8-4D6C-A990-1B76C687971A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3162DD-7CD8-4D6C-A990-1B76C687971A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C79E9FE-3070-43BE-AF4C-B5B29F17CD66}
+	EndGlobalSection
+EndGlobal

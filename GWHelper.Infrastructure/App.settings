@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GWHelper.Infrastructure" GeneratedClassName="App">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.guildwars2.com/</Value>
+    </Setting>
+    <Setting Name="ApiKeyPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Bearer </Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
