@@ -5,14 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GWHelper.Windows"
         xmlns:viewModels="clr-namespace:GWHelper.ViewModels"
+        xmlns:commands="clr-namespace:GWHelper.Commands"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        commands:ViewModelBehavior.LoadUnload = "True"
+>
     <Window.DataContext>
         <viewModels:MainWindowViewModel/>
     </Window.DataContext>
     <Grid>
-        <Menu x:Name="UsersMenu" Margin="449,10,10,307" Cursor="AppStarting" FlowDirection="RightToLeft" IsMainMenu="False">
-            <Button Content="Войти в аккаунт" Command="{Binding LoginCommand}"/>
-        </Menu>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Row ="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Menu x:Name="UsersMenu" Grid.Column="2"  Cursor="AppStarting" FlowDirection="RightToLeft" IsMainMenu="False">
+                <Button Content="Войти в аккаунт" Command="{Binding LoginCommand}"/>
+            </Menu>
+        </Grid>
+
+        <Grid Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="2*"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width ="10*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="pack://application:,,,/GwHelper.Resources;component/Images/user.png"></Image>
+                <Image Grid.Row="1" Source="pack://application:,,,/GwHelper.Resources;component/Images/event.png"></Image>
+                <Image Grid.Row="2" Source="pack://application:,,,/GwHelper.Resources;component/Images/demon.png"></Image>
+                <Image Grid.Row="3" Source="pack://application:,,,/GwHelper.Resources;component/Images/refine.png"></Image>
+            </Grid>
+
+            <GridSplitter Grid.Column="1" ShowsPreview="False" Width="3"
+                          HorizontalAlignment="Center" VerticalAlignment="Stretch"></GridSplitter>
+
+            <Frame Grid.Column="2"></Frame>
+        </Grid>
     </Grid>
 </Window>

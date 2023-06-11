@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Autofac;
 using GWHelper.Commands;
 using GWHelper.Infrastructure.Models;
@@ -13,7 +14,7 @@ using GWHelper.Windows;
 
 namespace GWHelper.ViewModels
 {
-    public class MainWindowViewModel : INotifyPropertyChanged
+    public class MainWindowViewModel : IViewModel
     {
 
         private RelayCommand _loginCommand;
@@ -28,6 +29,7 @@ namespace GWHelper.ViewModels
                 }));
             }
         }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -41,6 +43,23 @@ namespace GWHelper.ViewModels
             field = value;
             OnPropertyChanged(propertyName);
             return true;
+        }
+
+        public bool Initialized { get; set; }
+        public void Load(FrameworkElement element)
+        {
+            using (var scope = AutofacContainer.Container.BeginLifetimeScope())
+            {
+                var dbService = scope.Resolve<IDbService<User>>();
+                var lastUser = dbService.FirstOrDefault();
+
+                if (lastUser != null)
+                    AppContext.Instance.ApiKey = lastUser.api_key;
+            }
+        }
+
+        public void Unload(FrameworkElement element)
+        {
         }
     }
 }

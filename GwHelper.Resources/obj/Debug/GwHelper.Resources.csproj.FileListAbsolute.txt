@@ -1,0 +1,9 @@
+D:\Soft\Projects\GWHelper\GwHelper.Resources\obj\Debug\GwHelper.Resources.csproj.AssemblyReference.cache
+D:\Soft\Projects\GWHelper\GwHelper.Resources\obj\Debug\GwHelper.Resources.g.resources
+D:\Soft\Projects\GWHelper\GwHelper.Resources\obj\Debug\GwHelper.Resources.Properties.Resources.resources
+D:\Soft\Projects\GWHelper\GwHelper.Resources\obj\Debug\GwHelper.Resources.csproj.GenerateResource.cache
+D:\Soft\Projects\GWHelper\GwHelper.Resources\obj\Debug\GwHelper.Resources.csproj.CoreCompileInputs.cache
+D:\Soft\Projects\GWHelper\GwHelper.Resources\bin\Debug\GwHelper.Resources.dll
+D:\Soft\Projects\GWHelper\GwHelper.Resources\bin\Debug\GwHelper.Resources.pdb
+D:\Soft\Projects\GWHelper\GwHelper.Resources\obj\Debug\GwHelper.Resources.dll
+D:\Soft\Projects\GWHelper\GwHelper.Resources\obj\Debug\GwHelper.Resources.pdb

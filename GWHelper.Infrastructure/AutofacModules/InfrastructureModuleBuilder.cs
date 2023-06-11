@@ -22,6 +22,7 @@ namespace GWHelper.Infrastructure.AutofacModules
         {
             _builder.RegisterType<DbService<User>>().As<IDbService<User>>();
             _builder.RegisterType<GwUserService>().As<IGwUserService>();
+            _builder.RegisterType<GwInfoService>().As<IGwInfoService>();
         }
     }
 }

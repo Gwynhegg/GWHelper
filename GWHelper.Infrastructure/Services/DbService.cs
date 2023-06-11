@@ -17,7 +17,7 @@ namespace GWHelper.Infrastructure.Services
             using (var context = new GwContext())
             {
                 var dbSet = context.Set<T>();
-                dbSet.Add(item);
+                dbSet.AddOrUpdate(item);
                 context.SaveChanges();
             }
         }
@@ -64,13 +64,21 @@ namespace GWHelper.Infrastructure.Services
             }
         }
 
-        public void UpdateItem(T item)
+        public List<T> SelectAll()
         {
             using (var context = new GwContext())
             {
                 var dbSet = context.Set<T>();
-                dbSet.AddOrUpdate(item);
-                context.SaveChanges();
+                return dbSet.ToList();
+            }
+        }
+
+        public T FirstOrDefault()
+        {
+            using (var context = new GwContext())
+            {
+                var dbSet = context.Set<T>();
+                return dbSet.FirstOrDefault();
             }
         }
     }

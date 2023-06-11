@@ -1,4 +1,7 @@
-﻿namespace GWHelper.Infrastructure.Services.Interfaces
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace GWHelper.Infrastructure.Services.Interfaces
 {
     public interface IDbService<T>
     {
@@ -7,6 +10,7 @@
         T GetItem(int id);
         void RemoveItem(string id);
         void RemoveItem(int id);
-        void UpdateItem(T item);
+        List<T> SelectAll();
+        T FirstOrDefault();
     }
 }

@@ -13,27 +13,33 @@ namespace GWHelper.Infrastructure.Services
 {
     public class GwUserService : IGwUserService
     {
-        private static HttpClient _client = new HttpClient()
-        {
-            BaseAddress = new Uri(App.Default.ConnectionString)
-        };
-
         public async Task<User> GetAccount(string apiKey)
         {
-            _client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse(
-                String.Concat(App.Default.ApiKeyPrefix, apiKey));
-
-            HttpResponseMessage message = await _client.GetAsync("v2/account");
-
-            if (message == null || message.StatusCode != HttpStatusCode.OK)
-                return null;
-
-            var response = await message.Content.ReadAsStringAsync();
-
-            var user = Deserialize<User>(response);
+            var user = await ResponseBuilder.GetResponse<User>(apiKey: apiKey);
             user.api_key = apiKey;
 
             return user;
+        }
+
+        public async Task<List<Achievement>> GetAchievements(string apiKey)
+        {
+            var achievements = await ResponseBuilder.GetResponse<List<Achievement>>(apiKey: apiKey);
+
+            return achievements;
+        }
+
+        public async Task<List<Material>> GetMaterials(string apiKey)
+        {
+            var materials = await ResponseBuilder.GetResponse<List<Material>>(apiKey: apiKey);
+
+            return materials;
+        }
+
+        public async Task<List<Currency>> GetCurrencies(string apiKey)
+        {
+            var currencies = await ResponseBuilder.GetResponse<List<Currency>>(apiKey: apiKey);
+
+            return currencies;
         }
     }
 }

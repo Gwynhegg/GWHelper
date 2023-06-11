@@ -90,6 +90,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AppContext.cs" />
+    <Compile Include="Commands\ViewModelBehavior.cs" />
+    <Compile Include="ViewModels\IViewModel.cs" />
     <Compile Include="Windows\NotificationWindow.xaml.cs">
       <DependentUpon>NotificationWindow.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
     <ProjectReference Include="..\GWHelper.Infrastructure\GWHelper.Infrastructure.csproj">
       <Project>{bf3162dd-7cd8-4d6c-a990-1b76c687971a}</Project>
       <Name>GWHelper.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GwHelper.Resources\GwHelper.Resources.csproj">
+      <Project>{fe6d3e27-40db-4da9-aff6-32b01858b88f}</Project>
+      <Name>GwHelper.Resources</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

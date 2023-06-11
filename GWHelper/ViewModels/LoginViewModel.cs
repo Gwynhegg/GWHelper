@@ -38,11 +38,11 @@ namespace GWHelper.ViewModels
                         var gwService = scope.Resolve<IGwUserService>();
                         var account = await gwService.GetAccount(_apiKey);
 
-                        if (account != null)
-                        {
-                            var dbUserService = scope.Resolve<IDbService<User>>();
-                            dbUserService.AddItem(account);
-                        }
+                        if (account == null) return;
+
+                        var dbUserService = scope.Resolve<IDbService<User>>();
+                        dbUserService.AddItem(account);
+                        AppContext.Instance.ApiKey = account.api_key;
                     }
                 }));
             }

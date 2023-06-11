@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GWHelper.AppStart;
+using GWHelper.Commands;
 using GWHelper.ViewModels;
 using GWHelper.Windows;
 

@@ -47,3 +47,7 @@ D:\Soft\Projects\GWHelper\GWHelper\bin\Debug\GWHelper.Infrastructure.dll.config
 D:\Soft\Projects\GWHelper\GWHelper\bin\Debug\System.Text.Json.xml
 D:\Soft\Projects\GWHelper\GWHelper\bin\Debug\System.ValueTuple.xml
 D:\Soft\Projects\GWHelper\GWHelper\bin\Debug\System.Text.Encodings.Web.xml
+D:\Soft\Projects\GWHelper\GWHelper\obj\Debug\Windows\NotificationWindow.g.cs
+D:\Soft\Projects\GWHelper\GWHelper\obj\Debug\Windows\NotificationWindow.baml
+D:\Soft\Projects\GWHelper\GWHelper\bin\Debug\GwHelper.Resources.dll
+D:\Soft\Projects\GWHelper\GWHelper\bin\Debug\GwHelper.Resources.pdb
